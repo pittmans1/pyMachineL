@@ -196,7 +196,7 @@ def plot_fruit_knn(X, y, n_neighbors, weights):
     # Put the result into a color plot
     Z = Z.reshape(xx.shape)
     plt.figure()
-    plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
+    plt.pcolormesh(xx, yy, Z, shading='auto',cmap=cmap_light)
 
     # Plot training points
     plt.scatter(X_mat[:, 0], X_mat[:, 1], s=plot_symbol_size, c=y, cmap=cmap_bold, edgecolor = 'black')
@@ -212,7 +212,7 @@ def plot_fruit_knn(X, y, n_neighbors, weights):
         
     plt.xlabel('height (cm)')
     plt.ylabel('width (cm)')
-    
+    #%%
     plt.show()
 
 def plot_two_class_knn(X, y, n_neighbors, weights, X_test, y_test):
